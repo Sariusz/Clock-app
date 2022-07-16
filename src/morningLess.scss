@@ -1,0 +1,67 @@
+.top__half--container {
+    height: 50%;
+    width: 100%;
+}
+
+.main__clock--container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    height: 50%;
+    width: 50%;
+}
+
+.main__clock__container__greeting--container {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.main__clock__container--greeting {
+    font-size: 20px;
+    letter-spacing: 4px;
+    position: relative;
+    top: 55%;
+
+}
+
+.main__clock__container--greeting--sun {
+    margin-right: 20px;
+    font-size: 24px;
+    position: relative;
+    top: 50%;
+
+}
+
+.main__clock__container__time--container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.main__clock__container--currentTime {
+    margin: 0;
+    font-size: 200px;
+    font-family: 'Inter' sans-serif;
+    position: relative;
+    top: 30%;
+    left: -3%;
+}
+
+.main__clock__container--timeZone {
+    font-size: 30px;
+    font-weight: bolder;
+    position: relative;
+    top: 56%;
+    left: -2%;
+}
+
+.main__clock__container--location {
+    position: relative;
+    bottom: -15%;
+    font-size: 24px;
+    letter-spacing: 4.5px;
+}
