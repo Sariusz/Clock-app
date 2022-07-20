@@ -1,17 +1,20 @@
-import Morning from './Morning.js'
-import MorningLess from './MorningLess'
-import '../src/styles.scss'
+import React, { useState } from "react";
+import { useEffect } from "react";
+import Morning from './Morning.js';
+import MorningLess from './MorningLess';
+import Evening from './Evening';
+import EveningLess from './EveningLess';
+import './styles.scss';
+import App2 from "./lalala.js";
 
-
-
-function App() {
+const App = () => {
   return (
     <>
       <div className="App">
-        <MorningLess></MorningLess>
+        <App2/>
         </div>
       </>
       );
 }
+export default App
 
-export default App;

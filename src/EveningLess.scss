@@ -1,12 +1,12 @@
 .top__half--container {
-    color:orangered;
+    color: white;
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 50%;
     margin-bottom: 2rem;
-    margin-top:3rem;
-   
+    margin-top: 3rem;
+
 }
 
 .top__half__clock--container {
@@ -14,11 +14,13 @@
     height: 50%;
     display: flex;
     flex-direction: column;
-   
+
 }
-.top__half__clock--container div{
-    margin-left:10rem;
+
+.top__half__clock--container div {
+    margin-left: 10rem;
 }
+
 .top__half__clock__container__greeting--container {
     display: flex;
     align-items: center;
@@ -42,7 +44,7 @@
 }
 
 
-.top__half__clock__container--currentTime{
+.top__half__clock__container--currentTime {
     font-size: 20rem;
     font-family: 'Montserrat' sans-serif;
     margin-left: -3rem;
@@ -53,16 +55,19 @@
     font-size: 3rem;
     font-weight: bolder;
     padding-top: 11rem;
-   
+
 }
+
 .top__half__clock__less--container {
     display: flex;
     justify-content: space-between;
 }
+
 .top__half__clock__less__container--location {
     font-size: 2.4rem;
     letter-spacing: 0.45rem;
 }
+
 .top__half__clock__less__container--dropdown {
     background-color: white;
     width: 14.6rem;
@@ -72,29 +77,31 @@
     align-items: center;
     justify-content: center;
     margin-right: 10rem;
-    margin-top:-0.5rem;
-    padding-left:0.5rem;
+    margin-top: -0.5rem;
+    padding-left: 0.5rem;
 }
-.top__half__clock__less__container--text{
+
+.top__half__clock__less__container--text {
     background: none;
     border: none;
     font-size: 1.6rem;
-    color: orangered;
+    color:black;
     font-weight: 600;
     letter-spacing: 0.4rem;
     font-family: 'Montserrat' sans-serif;
-    
+
 }
+
 .top__half__clock__less__container--button {
     background: none;
     font-size: 5rem;
     padding-top: 1rem;
     cursor: pointer;
-    color: orangered;
+    color:black;
 }
 
 .more__clock--container {
-    background-color:rgb(0, 100, 77);
+    background-color:black;
     font-family: 'Montserrat', sans-serif;
     width: 100%;
     height: 50%;
@@ -102,23 +109,29 @@
     align-items: center;
 
 }
-.more__clock--container div{
-   display: flex;
-   flex-direction: column;
-   margin-left:10rem;
+
+.more__clock--container div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10rem;
 }
-.more__clock--container p{
+
+.more__clock--container p {
     font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif;
 }
-.more__clock--container h1{
+
+.more__clock--container h1 {
     font-size: 5.6rem;
     font-family: 'Montserrat', sans-serif;
 }
-.more__clock__container--dayinfo p,h1{
-    padding-bottom:2rem;
+
+.more__clock__container--dayinfo p,
+h1 {
+    padding-bottom: 2rem;
 }
-.more__clock__container--weekinfo p, h1{
-    padding-bottom:2rem;
+
+.more__clock__container--weekinfo p,
+h1 {
+    padding-bottom: 2rem;
 }
-   

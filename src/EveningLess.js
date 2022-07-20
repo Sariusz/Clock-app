@@ -1,15 +1,15 @@
 import React from 'react';
-import { BsFillSunFill } from 'react-icons/bs';
+import { FaMoon } from 'react-icons/fa';
 import { IoIosArrowDropupCircle } from 'react-icons/io';
 
-const MorningLess = () => {
+const EveningLess = () => {
     return (
         <div className='main__container'>
             <div className='top__half--container'>
                 <div className='top__half__clock--container'>
                     <div className='top__half__clock__container__greeting--container'>
-                        <BsFillSunFill className='top__half__clock__container__greeting--sun'></BsFillSunFill> 
-                        <p className='top__half__clock__container__greeting--text'>GOOD MORNING, IT'S CURRENTLY</p>
+                        <FaMoon className='top__half__clock__container__greeting--sun'></FaMoon> 
+                        <p className='top__half__clock__container__greeting--text'>GOOD EVENING, IT'S CURRENTLY</p>
                     </div>
                     <div className='top__half__clock__container__time--container'>
                         <p className='top__half__clock__container--currentTime'>11:37</p>
@@ -42,4 +42,4 @@ const MorningLess = () => {
         </div>
     )
 }
-export default MorningLess
+export default EveningLess
