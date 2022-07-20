@@ -10,20 +10,20 @@
 html,
 body {
     font-size: 10px;
-    background: url("./images/bg-image-nighttime.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 1;
+    
 
 }
 
-.main__container {
+.main__container__dark {
     display: flex;
     flex-direction: column;
     height: 100vh;
     width: 100%;
     color:white;
-
+    background: url("./images/bg-image-nighttime.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
 }
 
 .header {
@@ -127,7 +127,7 @@ body {
     letter-spacing: 0.45rem;
 }
 
-.more__container--dropdown {
+.more__container__dark--dropdown {
     background-color: white;
     width: 14.6rem;
     height: 5.6rem;
@@ -139,7 +139,7 @@ body {
 
 }
 
-.more__container--text {
+.more__container__dark--text {
     background: none;
     border: none;
     font-size: 1.6rem;
@@ -148,7 +148,7 @@ body {
     font-family: 'Montserrat' sans-serif;
 }
 
-.more__container__dropdown--button {
+.more__container__dark__dropdown--button {
     background: none;
     font-size: 5rem;
     padding-top: 1rem;

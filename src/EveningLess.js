@@ -4,7 +4,7 @@ import { IoIosArrowDropupCircle } from 'react-icons/io';
 
 const EveningLess = () => {
     return (
-        <div className='main__container'>
+        <div className='main__container--dark'>
             <div className='top__half--container'>
                 <div className='top__half__clock--container'>
                     <div className='top__half__clock__container__greeting--container'>
@@ -17,9 +17,9 @@ const EveningLess = () => {
                     </div>
                      <div className='top__half__clock__less--container'>
                     <p className='top__half__clock__less__container--location'>IN LONDON, UK</p>
-                    <div className='top__half__clock__less__container--dropdown'>
-                        <p className='top__half__clock__less__container--text'>LESS</p>
-                        <button className='top__half__clock__less__container--button'><IoIosArrowDropupCircle/></button>
+                    <div className='top__half__clock__less__container__dark--dropdown'>
+                        <p className='top__half__clock__less__container__dark--text'>LESS</p>
+                        <button className='top__half__clock__less__container__dark--button'><IoIosArrowDropupCircle/></button>
                     </div>
                 </div>
                 </div>

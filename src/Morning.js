@@ -2,7 +2,7 @@ import React from 'react';
 import {FiRefreshCw} from 'react-icons/fi';
 import { BsFillSunFill } from 'react-icons/bs';
 import { IoIosArrowDropdownCircle } from 'react-icons/io';
-
+import './index.scss';
 const Morning= () => {
     return (    
     <div className='main__container'>

@@ -1,3 +1,14 @@
+.main__container--dark{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    background: url("./images/bg-image-nighttime.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+}
 .top__half--container {
     color: white;
     display: flex;
@@ -68,7 +79,7 @@
     letter-spacing: 0.45rem;
 }
 
-.top__half__clock__less__container--dropdown {
+.top__half__clock__less__container__dark--dropdown {
     background-color: white;
     width: 14.6rem;
     height: 5.6rem;
@@ -81,7 +92,7 @@
     padding-left: 0.5rem;
 }
 
-.top__half__clock__less__container--text {
+.top__half__clock__less__container__dark--text {
     background: none;
     border: none;
     font-size: 1.6rem;
@@ -92,7 +103,7 @@
 
 }
 
-.top__half__clock__less__container--button {
+.top__half__clock__less__container__dark--button {
     background: none;
     font-size: 5rem;
     padding-top: 1rem;

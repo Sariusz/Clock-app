@@ -2,10 +2,10 @@ import React from 'react';
 import {FiRefreshCw} from 'react-icons/fi';
 import {FaMoon} from 'react-icons/fa';
 import { IoIosArrowDropdownCircle } from 'react-icons/io';
-
+import './evening.scss';
 const Evening= () => {
     return (    
-    <div className='main__container'>
+    <div className='main__container__dark'>
         <header className='header'>
             <div className='header__quote'>
                 <p>"The one serious conviction that a man should have is that nothing is to be taken too seriously."</p>
@@ -24,9 +24,9 @@ const Evening= () => {
                 </div>
                 <div className='more__container'>
                         <p className='more__container--location'>IN LONDON, UK</p>
-                    <div className='more__container--dropdown'> 
-                        <p className='more__container--text'>MORE</p>
-                        <button className='more__container__dropdown--button'><IoIosArrowDropdownCircle/></button>
+                    <div className='more__container__dark--dropdown'> 
+                        <p className='more__container__dark--text'>MORE</p>
+                        <button className='more__container__dark__dropdown--button'><IoIosArrowDropdownCircle/></button>
                     </div>
                 </div>
             </div>
