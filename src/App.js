@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect  } from "react";
 import Morning from './Morning.js';
 import MorningLess from './MorningLess';
 import Evening from './Evening';
@@ -8,9 +7,9 @@ import './styles.scss';
 import EveningCheck from "./lalala.js";
 
 const App = () => {
-  return (
-      <EveningCheck/>
-      );
+  return(
+    <EveningCheck></EveningCheck>
+    )
 }
-export default App
 
+export default App

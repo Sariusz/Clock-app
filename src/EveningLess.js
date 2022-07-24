@@ -2,7 +2,7 @@ import React from 'react';
 import { FaMoon } from 'react-icons/fa';
 import { IoIosArrowDropupCircle } from 'react-icons/io';
 
-const EveningLess = () => {
+const EveningLess = (props) => {
     return (
         <div className='main__container--dark'>
             <div className='top__half--container'>
@@ -19,7 +19,7 @@ const EveningLess = () => {
                     <p className='top__half__clock__less__container--location'>IN LONDON, UK</p>
                     <div className='top__half__clock__less__container__dark--dropdown'>
                         <p className='top__half__clock__less__container__dark--text'>LESS</p>
-                        <button className='top__half__clock__less__container__dark--button'><IoIosArrowDropupCircle/></button>
+                        <button className='top__half__clock__less__container__dark--button' onClick={() => props.onClick()}><IoIosArrowDropupCircle/></button>
                     </div>
                 </div>
                 </div>
