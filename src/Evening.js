@@ -8,10 +8,10 @@ const Evening= (props) => {
     <div className='main__container__dark'>
         <header className='header'>
             <div className='header__quote'>
-                <p>"The one serious conviction that a man should have is that nothing is to be taken too seriously."</p>
+                <p>{props.randomQuote}</p>
                 <button className='header__button' onClick={() => props.onClick()}><FiRefreshCw color='white'/></button>
             </div>
-            <p className='header__author'>Nicholas Butler</p>
+            <p className='header__author'>{props.author}</p>
         </header>
             <div className='main__clock--container'>
                 <div className='main__clock__container__greeting--container'>
