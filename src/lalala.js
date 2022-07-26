@@ -6,8 +6,8 @@ import Evening from './Evening';
 import MorningLess from "./MorningLess.js";
  import EveningLess from "./EveningLess.js";
 const checkTime = () =>{
-let now = new Date;
-let toogleComponent = new Date;
+let now = new Date();
+let toogleComponent = new Date();
 toogleComponent.setHours(10, 0, 0, 0); 
 
 if (now >= toogleComponent) {
@@ -59,20 +59,22 @@ const EveningCheck = () => {
     useEffect(() => {
         setIsEvening(checkTime());
     }, [])
-    let checkEvening;
+    let component;
     if (isEvening === true) {
-        checkEvening = <Evening isOn={isEvening} onClick={press}></Evening>
-        checkEvening = pressed ? <EveningLess onClick={press} /> : <Evening onClick={press} />
-        checkEvening = refreshed ? <Evening onClick = {refresh}randomQuote = {randomQuote.en} author = {randomQuote.author}></Evening> : <Evening onClick ={refresh}randomQuote = {randomQuote.en} author={randomQuote.author}></Evening>
+
+        component = <Evening onPress={press} isPressed={pressed} onRefresh={refresh} randomQuote = {randomQuote.en} author = {randomQuote.author}/>
+
+        // component = <Evening isOn={isEvening} onClick={press}></Evening>
+        // component = pressed ? <EveningLess onClick={press} /> : <Evening onClick={press} />
+        // component = refreshed ? <Evening onClick = {refresh}randomQuote = {randomQuote.en} author = {randomQuote.author}></Evening> : <Evening onClick ={refresh}randomQuote = {randomQuote.en} author={randomQuote.author}></Evening>
         
-    }
-    else {
-        checkEvening = <Morning isOn={isEvening} onClick={press}></Morning>
-        checkEvening = pressed ? <MorningLess onClick={press} /> : <Morning onClick={press} />
-        checkEvening = refreshed ? <Morning onClick = {refresh}randomQuote = {randomQuote.en} author = {randomQuote.author}></Morning> : <Morning onClick ={refresh}randomQuote = {randomQuote.en} author={randomQuote.author}></Morning>
+    } else {
+        component = <Morning isOn={isEvening} onClick={press}></Morning>
+        component = pressed ? <MorningLess onClick={press} /> : <Morning onClick={press} />
+        component = refreshed ? <Morning onClick = {refresh}randomQuote = {randomQuote.en} author = {randomQuote.author}></Morning> : <Morning onClick ={refresh}randomQuote = {randomQuote.en} author={randomQuote.author}></Morning>
     }
     return (
-        <>{checkEvening}</>
+        <>{component}</>
     )
 }
 export default EveningCheck
