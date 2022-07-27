@@ -28,11 +28,14 @@ const Morning = (props) => {
             </p>
           </div>
           <div className="main__clock__container__time--container">
-            <p className="main__clock__container--currentTime"></p>
-            <p className="main__clock__container--timeZone">BST</p>
+            <p className="main__clock__container--currentTime">{props.time}</p>
+            <p className="main__clock__container--timeZone">{props.timeZone}</p>
           </div>
           <div className="more__container">
-                    <p className="more__container--location"> in {props.city}</p>
+            <p className="more__container--location">
+              {" "}
+              in {props.city}, {props.country}
+            </p>
             <div className="more__container--dropdown">
               <p className="more__container--text">MORE</p>
               <button

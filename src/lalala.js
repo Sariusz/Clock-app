@@ -20,7 +20,9 @@ const EveningCheck = () => {
   const [randomQuote, setRandomQuote] = useState(true);
   const [pressed, setPressed] = useState(false);
   const [isEvening, setIsEvening] = useState(false);
-  const [currentTime, setCurrentTime] = useState(false);
+  const [currentTime, setCurrentTime] = useState();
+  const [currentDays, setCurrentDays] = useState();
+
   const refresh = () => {
     fetch("https://programming-quotes-api.herokuapp.com/Quotes/random")
       .then((response) => response.json())
@@ -34,62 +36,92 @@ const EveningCheck = () => {
   };
 
   useEffect(() => {
-      refresh();
+    refresh();
   }, []);
   useEffect(() => {
     setIsEvening(checkTime());
   }, []);
-    useEffect(
-        () => {
-        fetch("https://timezoneapi.io/api/ip/?token=aotrCOJkAzrNAMzWumKw")
-          .then((response) => response.json())
-          .then((json) => {
-            setCurrentTime(json);
-            console.log(json);
-          });
+  useEffect(() => {
+    fetch("http://worldtimeapi.org/api/ip")
+      .then((response) => response.json())
+      .then((json) => {
+        setCurrentDays(json);
+        console.log(json);
+      });
+  }, []);
+  useEffect(() => {
+    fetch("https://timezoneapi.io/api/ip/?token=aotrCOJkAzrNAMzWumKw")
+      .then((response) => response.json())
+      .then((json) => {
+        setCurrentTime(json);
+      });
   }, []);
 
-    let checkEvening;
-    
-    if ( isEvening === true) {
-    checkEvening = pressed ?  (
-      <EveningLess
-        onPress={press}
-        onRefresh={refresh}
-        randomQuote={randomQuote.en}
-        author={randomQuote.author}
-      />
-    ) : (
-      <Evening
-        onPress={press}
-        onRefresh={refresh}
-        randomQuote={randomQuote.en}
-        author={randomQuote.author}
-      />
-    );
-  } else 
-    checkEvening = pressed ?
-        (
-          <MorningLess
-            onPress={press}
-            onRefresh={refresh}
-            randomQuote={randomQuote.en}
-            author={randomQuote.author}
-            city={currentTime.data.city}
-            //country={currentTime.data.timezone.country_code}
-          />
-        )
-      :  (
-          <Morning
-            onPress={press}
-            onRefresh={refresh}
-            randomQuote={randomQuote.en}
-            author={randomQuote.author}
-            city={currentTime.data.city}
-            //country={currentTime.data.timezone.country_code}
-            //time={currentTime.data.}
-          />
-        );
+  let checkEvening;
+
+  if (isEvening === true) {
+    if (typeof currentTime === "object" && typeof currentDays === "object") {
+      checkEvening = pressed ? (
+        <EveningLess
+          onPress={press}
+          onRefresh={refresh}
+          randomQuote={randomQuote.en}
+          author={randomQuote.author}
+          city={currentTime.data.city}
+          country={currentTime.data.timezone.country_code}
+          time={currentTime.data.datetime.time}
+          timeZone={currentTime.data.datetime.offset_tzab}
+          timeZoneId={currentTime.data.timezone.id}
+          dayOfYear={currentDays.day_of_year}
+          dayOfWeek={currentDays.day_of_week}
+          weekOfYear={currentDays.week_number}
+        />
+      ) : (
+        <Evening
+          onPress={press}
+          onRefresh={refresh}
+          randomQuote={randomQuote.en}
+          author={randomQuote.author}
+          city={currentTime.data.city}
+          country={currentTime.data.timezone.country_code}
+          time={currentTime.data.datetime.time}
+          timeZone={currentTime.data.datetime.offset_tzab}
+        />
+      );
+    }
+  } else {
+      
+    if (typeof currentTime === "object" && typeof currentDays === "object") {
+      console.log(currentTime);
+      checkEvening = pressed ? (
+        <MorningLess
+          onPress={press}
+          onRefresh={refresh}
+          randomQuote={randomQuote.en}
+          author={randomQuote.author}
+          city={currentTime.data.city}
+          country={currentTime.data.timezone.country_code}
+          time={currentTime.data.datetime.time}
+          timeZone={currentTime.data.datetime.offset_tzab}
+          timeZoneId={currentTime.data.timezone.id}
+          dayOfYear={currentDays.day_of_year}
+          dayOfWeek={currentDays.day_of_week}
+          weekOfYear={currentDays.week_number}
+        />
+      ) : (
+        <Morning
+          onPress={press}
+          onRefresh={refresh}
+          randomQuote={randomQuote.en}
+          author={randomQuote.author}
+          city={currentTime.data.city}
+          country={currentTime.data.timezone.country_code}
+          time={currentTime.data.datetime.time}
+          timeZone={currentTime.data.datetime.offset_tzab}
+        />
+      );
+    }
+  }
   return <>{checkEvening}</>;
 };
 export default EveningCheck;
