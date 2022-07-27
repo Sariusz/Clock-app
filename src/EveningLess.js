@@ -19,7 +19,7 @@ const EveningLess = (props) => {
                     <p className='top__half__clock__less__container--location'>IN LONDON, UK</p>
                     <div className='top__half__clock__less__container__dark--dropdown'>
                         <p className='top__half__clock__less__container__dark--text'>LESS</p>
-                        <button className='top__half__clock__less__container__dark--button' onClick={() => props.onClick()}><IoIosArrowDropupCircle/></button>
+                        <button className='top__half__clock__less__container__dark--button' onClick={() => props.onPress()}><IoIosArrowDropupCircle/></button>
                     </div>
                 </div>
                 </div>

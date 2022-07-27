@@ -1,78 +1,95 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import Morning from './Morning.js';
-import Evening from './Evening';
+import Evening from "./Evening.js";
+import Morning from "./Morning.js";
 import MorningLess from "./MorningLess.js";
- import EveningLess from "./EveningLess.js";
-const checkTime = () =>{
-let now = new Date;
-let toogleComponent = new Date;
-toogleComponent.setHours(10, 0, 0, 0); 
+import EveningLess from "./EveningLess.js";
 
-if (now >= toogleComponent) {
-  return true
-}
-else {
-  return false
+const checkTime = () => {
+  let now = new Date();
+  let toogleComponent = new Date();
+  toogleComponent.setHours(17, 0, 0, 0);
+  if (now >= toogleComponent) {
+    return true;
+  } else {
+    return false;
   }
-}
+};
 const EveningCheck = () => {
-    const [refreshed, setRefreshed] = useState(false);
-    const [randomQuote, setRandomQuote] = useState(true)
-      const refresh = () => {
-    fetch('https://programming-quotes-api.herokuapp.com/Quotes/random')
+  const [randomQuote, setRandomQuote] = useState(true);
+  const [pressed, setPressed] = useState(false);
+  const [isEvening, setIsEvening] = useState(false);
+  const [currentTime, setCurrentTime] = useState(false);
+  const refresh = () => {
+    fetch("https://programming-quotes-api.herokuapp.com/Quotes/random")
       .then((response) => response.json())
       .then((json) => {
-          setRandomQuote(json)
-          JSON.stringify(randomQuote)
-  }) 
-        if (refreshed == true) {
-            setRefreshed(true)
-           
-        }
-        else {
-            setRefreshed(false)
-            }
-    } 
-    useEffect(() => {
-        fetch('https://programming-quotes-api.herokuapp.com/Quotes/random')
-      .then((response) => response.json())
-      .then((json) => {
-          setRandomQuote(json)
-          JSON.stringify(randomQuote)
-          
-  })
-    }, [])
-   
-  
-    
-    const[pressed, setPressed] = useState(false)
-    const press = () => {
-        if (pressed == false) { setPressed(true) }
-        else {
-            setPressed(false)
-        }
-    }
-    
-    const [isEvening, setIsEvening] = useState(false);
-    useEffect(() => {
-        setIsEvening(checkTime());
-    }, [])
+        setRandomQuote(json);
+      });
+  };
+
+  const press = () => {
+    setPressed(!pressed);
+  };
+
+  useEffect(() => {
+      refresh();
+  }, []);
+  useEffect(() => {
+    setIsEvening(checkTime());
+  }, []);
+    useEffect(
+        () => {
+        fetch("https://timezoneapi.io/api/ip/?token=aotrCOJkAzrNAMzWumKw")
+          .then((response) => response.json())
+          .then((json) => {
+            setCurrentTime(json);
+            console.log(json);
+          });
+  }, []);
+
     let checkEvening;
-    if (isEvening === true) {
-        checkEvening = <Evening isOn={isEvening} onClick={press}></Evening>
-        checkEvening = pressed ? <EveningLess onClick={press} /> : <Evening onClick={press} />
-        checkEvening = refreshed ? <Evening onClick = {refresh}randomQuote = {randomQuote.en} author = {randomQuote.author}></Evening> : <Evening onClick ={refresh}randomQuote = {randomQuote.en} author={randomQuote.author}></Evening>
-        
-    }
-    else {
-        checkEvening = <Morning isOn={isEvening} onClick={press}></Morning>
-        checkEvening = pressed ? <MorningLess onClick={press} /> : <Morning onClick={press} />
-        checkEvening = refreshed ? <Morning onClick = {refresh}randomQuote = {randomQuote.en} author = {randomQuote.author}></Morning> : <Morning onClick ={refresh}randomQuote = {randomQuote.en} author={randomQuote.author}></Morning>
-    }
-    return (
-        <>{checkEvening}</>
-    )
-}
-export default EveningCheck
+    
+    if ( isEvening === true) {
+    checkEvening = pressed ?  (
+      <EveningLess
+        onPress={press}
+        onRefresh={refresh}
+        randomQuote={randomQuote.en}
+        author={randomQuote.author}
+      />
+    ) : (
+      <Evening
+        onPress={press}
+        onRefresh={refresh}
+        randomQuote={randomQuote.en}
+        author={randomQuote.author}
+      />
+    );
+  } else 
+    checkEvening = pressed ?
+        (
+          <MorningLess
+            onPress={press}
+            onRefresh={refresh}
+            randomQuote={randomQuote.en}
+            author={randomQuote.author}
+            city={currentTime.data.city}
+            //country={currentTime.data.timezone.country_code}
+          />
+        )
+      :  (
+          <Morning
+            onPress={press}
+            onRefresh={refresh}
+            randomQuote={randomQuote.en}
+            author={randomQuote.author}
+            city={currentTime.data.city}
+            //country={currentTime.data.timezone.country_code}
+            //time={currentTime.data.}
+          />
+        );
+  return <>{checkEvening}</>;
+};
+export default EveningCheck;

@@ -5,35 +5,46 @@ import { IoIosArrowDropdownCircle } from 'react-icons/io';
 import './index.scss';
 import MorningLess from './MorningLess';
 import EveningCheck from './lalala';
-
 const Morning = (props) => {
-    return (    
-    <div className='main__container'>
-        <header className='header'>
-            <div className='header__quote'>
-                <p>{props.randomQuote}</p>
-                <button className='header__button' onClick={() => props.onClick()}><FiRefreshCw color='orangered'/></button>
-            </div>
-                <p className='header__author'>{props.author}</p>
+    return (
+      <div className="main__container">
+        <header className="header">
+          <div className="header__quote">
+            <p>{props.randomQuote}</p>
+            <button
+              className="header__button"
+              onClick={() => props.onRefresh()}
+            >
+              <FiRefreshCw color="orangered" />
+            </button>
+          </div>
+          <p className="header__author">{props.author}</p>
         </header>
-            <div className='main__clock--container'>
-                <div className='main__clock__container__greeting--container'>
-                    <BsFillSunFill className='main__clock__container--greeting--sun'></BsFillSunFill> 
-                    <p className='main__clock__container--greeting'>GOOD MORNING, IT'S CURRENTLY</p>
-                </div>
-                <div className='main__clock__container__time--container'>
-                    <p className='main__clock__container--currentTime'>11:37</p>
-                    <p className='main__clock__container--timeZone'>BST</p>
-                </div>
-                <div className='more__container'>
-                        <p className='more__container--location'>IN LONDON, UK</p>
-                    <div className='more__container--dropdown'> 
-                        <p className='more__container--text'>MORE</p>
-                        <button className='more__container__dropdown--button' onClick={() => props.onClick()}><IoIosArrowDropdownCircle/></button>
-                    </div>
-                </div>
+        <div className="main__clock--container">
+          <div className="main__clock__container__greeting--container">
+            <BsFillSunFill className="main__clock__container--greeting--sun"></BsFillSunFill>
+            <p className="main__clock__container--greeting">
+              GOOD MORNING, IT'S CURRENTLY
+            </p>
+          </div>
+          <div className="main__clock__container__time--container">
+            <p className="main__clock__container--currentTime"></p>
+            <p className="main__clock__container--timeZone">BST</p>
+          </div>
+          <div className="more__container">
+                    <p className="more__container--location"> in {props.city}</p>
+            <div className="more__container--dropdown">
+              <p className="more__container--text">MORE</p>
+              <button
+                className="more__container__dropdown--button"
+                onClick={() => props.onPress()}
+              >
+                <IoIosArrowDropdownCircle />
+              </button>
             </div>
-    </div>    
-    )
+          </div>
+        </div>
+      </div>
+    );
 }
 export default Morning 

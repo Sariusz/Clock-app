@@ -9,7 +9,7 @@ const Evening= (props) => {
         <header className='header'>
             <div className='header__quote'>
                 <p>{props.randomQuote}</p>
-                <button className='header__button' onClick={() => props.onClick()}><FiRefreshCw color='white'/></button>
+                <button className='header__button' onClick={() => props.onRefresh()}><FiRefreshCw color='white'/></button>
             </div>
             <p className='header__author'>{props.author}</p>
         </header>
@@ -19,14 +19,14 @@ const Evening= (props) => {
                     <p className='main__clock__container--greeting'>GOOD EVENING, IT'S CURRENTLY</p>
                 </div>
                 <div className='main__clock__container__time--container'>
-                    <p className='main__clock__container--currentTime'>11:37</p>
-                    <p className='main__clock__container--timeZone'>BST</p>
+                    <p className='main__clock__container--currentTime'>{props.time}</p>
+                    <p className='main__clock__container--timeZone'>{props.timeZone}</p>
                 </div>
                 <div className='more__container'>
-                        <p className='more__container--location'>IN LONDON, UK</p>
+                        <p className='more__container--location'>in {props.city}</p>
                     <div className='more__container__dark--dropdown'> 
                         <p className='more__container__dark--text'>MORE</p>
-                        <button className='more__container__dark__dropdown--button' onClick={() => props.onClick()}><IoIosArrowDropdownCircle/></button>
+                        <button className='more__container__dark__dropdown--button' onClick={() => props.onPress()}><IoIosArrowDropdownCircle/></button>
                     </div>
                 </div>
             </div>
