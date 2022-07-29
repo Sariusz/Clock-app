@@ -15,7 +15,7 @@ const Morning = (props) => {
               className="header__button"
               onClick={() => props.onRefresh()}
             >
-              <FiRefreshCw color="orangered" />
+              <FiRefreshCw/>
             </button>
           </div>
           <p className="header__author">{props.author}</p>

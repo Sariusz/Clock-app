@@ -1,124 +1,126 @@
+:root {
+  --my-font-family: "Montserrat";
+}
+
 .top__half--container__day {
-    color:orangered;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 50%;
-    margin-bottom: 2rem;
-    margin-top:3rem;
-   
+  color: orangered;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+  color: white;
 }
 
 .top__half__clock--container__day {
-    width: 100%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-   
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
 }
-.top__half__clock--container__day div{
-    margin-left:10rem;
+.top__half__clock--container__day div {
+  margin-left: 10rem;
 }
 .top__half__clock__container__day__greeting--container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .top__half__clock__container__day__greeting--text {
-    font-size: 2rem;
-    letter-spacing: 0.4rem;
-    padding-left: 1.5rem;
+  font-size: 2rem;
+  letter-spacing: 0.4rem;
+  padding-left: 1.5rem;
+  font-weight: 600;
 }
 
 .top__half__clock__container__day__greeting--sun {
-    font-size: 2.4rem;
-
+  font-size: 2.4rem;
 }
 
 .top__half__clock__container__day__time--container {
-    display: flex;
-    align-items: center;
-    margin-bottom: -1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: -1rem;
 }
 
-
-.top__half__clock__container__day--currentTime{
-    font-size: 20rem;
-    font-family: 'Montserrat' sans-serif;
-    margin-left: -3rem;
-    margin-top: 2rem;
+.top__half__clock__container__day--currentTime {
+  font-size: 17rem;
+  font-family: "Montserrat" sans-serif;
+  margin-left: -3rem;
+  margin-top: 2rem;
 }
 
 .top__half__clock__container__day--timeZone {
-    font-size: 3rem;
-    font-weight: bolder;
-    padding-top: 11rem;
-   
+  font-size: 3rem;
+  font-weight: bolder;
+  padding-top: 11rem;
 }
 .top__half__clock__less__day--container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .top__half__clock__less__container__day--location {
-    font-size: 2.4rem;
-    letter-spacing: 0.45rem;
+  font-size: 2.4rem;
+  letter-spacing: 0.45rem;
+  font-weight: 600;
 }
 .top__half__clock__less__container__day--dropdown {
-    background-color: white;
-    width: 14.6rem;
-    height: 5.6rem;
-    border-radius: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10rem;
-    margin-top:-0.5rem;
-    padding-left:0.5rem;
+  background-color: white;
+  width: 14.6rem;
+  height: 5.6rem;
+  border-radius: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10rem;
+  margin-top: -0.5rem;
+  padding-left: 0.5rem;
 }
-.top__half__clock__less__container__day--text{
-    background: none;
-    border: none;
-    font-size: 1.6rem;
-    color: orangered;
-    font-weight: 600;
-    letter-spacing: 0.4rem;
-    font-family: 'Montserrat' sans-serif;
-    
+.top__half__clock__less__container__day--text {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #1a4259;
+  font-weight: 600;
+  letter-spacing: 0.4rem;
+  font-family: "Montserrat" sans-serif;
 }
 .top__half__clock__less__container__day--button {
-    background: none;
-    font-size: 5rem;
-    padding-top: 1rem;
-    cursor: pointer;
-    color: orangered;
+  background: none;
+  font-size: 5rem;
+  padding-top: 1rem;
+  cursor: pointer;
+  color: #1a4259;
 }
 
 .more__clock__container--day {
-    background-color:rgb(0, 100, 77);
-    font-family: 'Montserrat', sans-serif;
-    width: 100%;
-    height: 50%;
-    display: flex;
-    align-items: center;
-
+  background-color: rgb(26, 66, 89, 0.85);
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 55%;
+  display: flex;
+  align-items: center;
+  color: white;
 }
-.more__clock__container--day div{
-   display: flex;
-   flex-direction: column;
-   margin-left:10rem;
+.more__clock__container--day div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10rem;
 }
-.more__clock__container--day p{
-    font-size: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
+.more__clock__container--day p {
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
 }
-.more__clock__container--day h1{
-    font-size: 5.6rem;
-    font-family: 'Montserrat', sans-serif;
+.more__clock__container--day h1 {
+  font-size: 5.6rem;
+  font-family: "Montserrat", sans-serif;
 }
-.more__clock__container--day--dayinfo p,h1{
-    padding-bottom:2rem;
+.more__clock__container--day--dayinfo p,
+h1 {
+  padding-bottom: 2rem;
 }
-.more__clock__container--day--weekinfo p, h1{
-    padding-bottom:2rem;
+.more__clock__container--day--weekinfo p,
+h1 {
+  padding-bottom: 2rem;
 }
-   

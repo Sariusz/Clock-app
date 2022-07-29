@@ -1,13 +1,19 @@
+
 *, *::before,*::after{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   border:none;
 }
-
+:root {
+  --my-font-family: 'Montserrat';
+  
+}
 html,body {
   font-size: 10px;
-  
+  background: url("./images/hendrik-kespohl-1YQDhLtB9yU-unsplash.jpg") no-repeat;
+  background-size: cover;
+  background-position-y: 10%;
   
 }
 .main__container {
@@ -15,11 +21,8 @@ html,body {
   flex-direction: column;
   height: 100vh;
   width: 100%;
-  color: orangered;
-  background: url("./images/bg-image-daytime.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 1;
+  color:white;
+ 
 
 }
 .header{
@@ -47,7 +50,7 @@ html,body {
   font-size: 2rem;
   font-weight:600;
   cursor:pointer;
-  color: orangered;
+  color:white;
   margin-top:-2.5rem;
   padding-left:1rem;
 
@@ -88,7 +91,7 @@ html,body {
   align-items: center;
 }
 .main__clock__container--currentTime{
-  font-size:20rem;
+  font-size:17rem;
   font-family: 'Montserrat' sans-serif;
   margin-left:-2rem;
   margin-top: 2rem;
@@ -124,16 +127,17 @@ html,body {
   background: none;
   border: none;
   font-size: 1.6rem;
-  color:orangered;
+  color: #1a4259;
   letter-spacing: 0.4rem;
   font-family: 'Montserrat'sans-serif;
+  font-weight: 600;
 }
   .more__container__dropdown--button{ 
     background:none;
     font-size:5rem;
     padding-top:1rem;
     cursor: pointer;
-    color:orangered;
+    color: #1a4259;
   }
 
 
