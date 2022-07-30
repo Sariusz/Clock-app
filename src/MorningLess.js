@@ -1,7 +1,7 @@
 import React from "react";
 import { BsFillSunFill } from "react-icons/bs";
 import { IoIosArrowDropupCircle } from "react-icons/io";
-
+import "./morningLess.scss";
 const MorningLess = (props) => {
   return (
     <div className="main__container">
@@ -49,7 +49,7 @@ const MorningLess = (props) => {
         <div className="more__clock__container--weekinfo">
           <p>DAY OF THE WEEK</p>
           <h1>{props.dayOfWeek}</h1>
-          <p>WEEK NUMBER</p>
+          <p>CALENDAR WEEK</p>
           <h1>{props.weekOfYear}</h1>
         </div>
       </div>

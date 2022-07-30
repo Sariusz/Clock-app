@@ -1,148 +1,148 @@
 :root {
-    --my-font-family: 'Montserrat', sans-serif;
+  --my-font-family: "Montserrat", sans-serif;
 }
-.main__container--dark{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100%;
-    color: white;
-    background: url("./images/bg-image-nighttime.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 1;
-    font-family: var(--my-font-family);
+.main__container--dark {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  background: url("./images/bg-image-nighttime.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1;
+  font-family: var(--my-font-family);
 }
 .top__half--container {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 50%;
-    margin-bottom: 2rem;
-    margin-top: 3rem;
-
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
 }
 
 .top__half__clock--container {
-    width: 100%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
 }
 
 .top__half__clock--container div {
-    margin-left: 10rem;
+  margin-left: 10rem;
 }
 
 .top__half__clock__container__greeting--container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+
 }
 
 .top__half__clock__container__greeting--text {
-    font-size: 2rem;
-    letter-spacing: 0.4rem;
-    padding-left: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.4rem;
+  padding-left: 1.5rem;
 }
 
 .top__half__clock__container__greeting--sun {
-    font-size: 2.4rem;
-
+  font-size: 2.4rem;
+  margin-left: -3rem;
 }
 
 .top__half__clock__container__time--container {
-    display: flex;
-    align-items: center;
-    margin-bottom: -1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: -1rem;
 }
 
-
 .top__half__clock__container--currentTime {
-    font-size: 17rem;
-    margin-left: -3rem;
-    margin-top: 2rem;
+  font-size: 17rem;
+  margin-left: -2rem;
+  margin-top: 2rem;
 }
 
 .top__half__clock__container--timeZone {
-    font-size: 3rem;
-    font-weight: bolder;
-    padding-top: 11rem;
-
+  font-size: 3rem;
+  font-weight: bolder;
+  padding-top: 11rem;
 }
 
 .top__half__clock__less--container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .top__half__clock__less__container--location {
-    font-size: 2.4rem;
-    letter-spacing: 0.45rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-left:-2rem;
+  letter-spacing: 0.45rem;
 }
 
 .top__half__clock__less__container__dark--dropdown {
-    background-color: white;
-    width: 14.6rem;
-    height: 5.6rem;
-    border-radius: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10rem;
-    margin-top: -0.5rem;
-    padding-left: 0.5rem;
+  background-color: white;
+  width: 14.6rem;
+  height: 5.6rem;
+  border-radius: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10rem;
+  margin-top: 0rem;
+  padding-left: 0.5rem;
 }
 
 .top__half__clock__less__container__dark--text {
-    background: none;
-    border: none;
-    font-size: 1.6rem;
-    color:black;
-    font-weight: 600;
-    letter-spacing: 0.4rem;
-   
-
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: black;
+  font-weight: 600;
+  letter-spacing: 0.4rem;
 }
 
 .top__half__clock__less__container__dark--button {
-    background: none;
-    font-size: 5rem;
-    padding-top: 1rem;
-    cursor: pointer;
-    color:black;
+  background: none;
+  font-size: 5rem;
+  padding-top: 1rem;
+  cursor: pointer;
+  color: black;
 }
 
 .more__clock--container {
-    background-color:black;
-    width: 100%;
-    height: 50%;
-    display: flex;
-    align-items: center;
-
+  background-color: black;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  opacity: 0.7;
 }
 
 .more__clock--container div {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 8rem;
+  margin-top: 3rem;
 }
 
 .more__clock--container p {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .more__clock--container h1 {
-    font-size: 5.6rem;
+  font-size: 5.6rem;
 }
 
 .more__clock__container--dayinfo p,
 h1 {
-    padding-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .more__clock__container--weekinfo p,
 h1 {
-    padding-bottom: 2rem;
+  padding-bottom: 2rem;
 }

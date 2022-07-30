@@ -90,7 +90,6 @@ const EveningCheck = () => {
       );
     }
   } else {
-      
     if (typeof currentTime === "object" && typeof currentDays === "object") {
       console.log(currentTime);
       checkEvening = pressed ? (

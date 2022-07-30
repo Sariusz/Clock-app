@@ -1,4 +1,5 @@
 import React from "react";
+import './EveningLess.scss'
 import { FaMoon } from "react-icons/fa";
 import { IoIosArrowDropupCircle } from "react-icons/io";
 
@@ -49,7 +50,7 @@ const EveningLess = (props) => {
         <div className="more__clock__container--weekinfo">
           <p>DAY OF THE WEEK</p>
           <h1>{props.dayOfWeek}</h1>
-          <p>WEEK NUMBER</p>
+          <p>CALENDAR WEEK</p>
           <h1>{props.weekOfYear}</h1>
         </div>
       </div>
