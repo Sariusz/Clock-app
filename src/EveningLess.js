@@ -1,5 +1,5 @@
 import React from "react";
-import './EveningLess.scss'
+import "./EveningLess.scss";
 import { FaMoon } from "react-icons/fa";
 import { IoIosArrowDropupCircle } from "react-icons/io";
 

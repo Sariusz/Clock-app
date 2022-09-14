@@ -6,15 +6,20 @@
   box-sizing: border-box;
   border: none;
 }
+
 :root {
   --my-font-family: "Montserrat";
 }
+
 html,
 body {
   font-size: 10px;
   font-family: var(--my-font-family);
-  body {overflow-x: hidden;}
- 
+
+  body {
+    overflow-x: hidden;
+  }
+
 
 }
 
@@ -24,10 +29,10 @@ body {
   height: 100vh;
   width: 100%;
   color: white;
-   background: url("./images/bg-image-nighttime.jpg");
+  background: url("./images/bg-image-nighttime.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  
+
 }
 
 .header {
@@ -109,7 +114,7 @@ body {
   font-weight: bolder;
   padding-top: 14rem;
   margin-top: -2rem;
-  margin-left:1rem;
+  margin-left: 1rem;
 }
 
 .more__container {

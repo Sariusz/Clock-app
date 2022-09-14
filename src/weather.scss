@@ -1,18 +1,20 @@
-.weather--container{
-    display:flex;
+.weather--container {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding:25px;
+    padding: 25px;
 }
-.weather--input{
-    padding:15px;
+
+.weather--input {
+    padding: 15px;
     width: 80%;
     margin: auto;
-    border:1px solid lightgray;
+    border: 1px solid lightgray;
     border-radius: 6px;
     font-size: 16px;
 }
-.weather--input:focus{
+
+.weather--input:focus {
     outline: none;
 }

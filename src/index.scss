@@ -6,14 +6,20 @@
   box-sizing: border-box;
   border: none;
 }
+
 :root {
   --my-font-family: "Montserrat";
 }
+
 html,
 body {
   font-size: 10px;
-  body {overflow-x: hidden;}
+
+  body {
+    overflow-x: hidden;
+  }
 }
+
 .main__container {
   display: flex;
   flex-direction: column;
@@ -24,6 +30,7 @@ body {
   background-size: cover;
   background-position-y: 10%;
 }
+
 .header {
   font-size: 1.8rem;
   font-weight: regular;
@@ -34,12 +41,14 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 .header__quote {
   display: flex;
   max-width: 50%;
   align-items: center;
   padding-top: 6rem;
 }
+
 .header__button {
   background: none;
   border: none;
@@ -50,12 +59,15 @@ body {
   margin-top: -2.5rem;
   padding-left: 1rem;
 }
+
 .header__author {
   padding-top: 1rem;
 }
+
 .header p {
   margin-left: 10rem;
 }
+
 .main__clock--container {
   width: 100%;
   height: 50%;
@@ -63,6 +75,7 @@ body {
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
 }
+
 .main__clock--container div {
   margin-left: 10rem;
 }
@@ -71,38 +84,46 @@ body {
   display: flex;
   align-items: center;
 }
+
 .main__clock__container--greeting {
   font-size: 2rem;
   letter-spacing: 0.4rem;
   padding-left: 1.5rem;
 }
+
 .main__clock__container--greeting--sun {
   font-size: 2.4rem;
 }
+
 .main__clock__container__time--container {
   display: flex;
   align-items: center;
 }
+
 .main__clock__container--currentTime {
   font-size: 17rem;
   font-family: "Montserrat" sans-serif;
   margin-left: -2rem;
   margin-top: 2rem;
 }
+
 .main__clock__container--timeZone {
   font-size: 3rem;
   font-weight: bolder;
   padding-top: 14rem;
 }
+
 .more__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .more__container--location {
   font-size: 2.4rem;
   letter-spacing: 0.45rem;
 }
+
 .more__container--dropdown {
   background-color: white;
   width: 14.6rem;
@@ -113,6 +134,7 @@ body {
   justify-content: center;
   margin-right: 10rem;
 }
+
 .more__container--text {
   background: none;
   border: none;
@@ -122,6 +144,7 @@ body {
   font-family: "Montserrat" sans-serif;
   font-weight: 600;
 }
+
 .more__container__dropdown--button {
   background: none;
   font-size: 5rem;

@@ -2,6 +2,7 @@ import React from "react";
 import { BsFillSunFill } from "react-icons/bs";
 import { IoIosArrowDropupCircle } from "react-icons/io";
 import "./morningLess.scss";
+
 const MorningLess = (props) => {
   return (
     <div className="main__container">
