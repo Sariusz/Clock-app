@@ -1,25 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FiRefreshCw } from "react-icons/fi";
-import { BsFillSunFill } from "react-icons/bs";
+import { FaMoon } from "react-icons/fa";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
-import "./index.scss";
-const Morning = (props) => {
+import "../scss/evening.scss";
+
+const Evening = (props) => {
   return (
-    <div className="main__container">
+    <div className="main__container__dark">
       <header className="header">
         <div className="header__quote">
           <p>{props.randomQuote}</p>
           <button className="header__button" onClick={() => props.onRefresh()}>
-            <FiRefreshCw />
+            <FiRefreshCw color="white" />
           </button>
         </div>
         <p className="header__author">{props.author}</p>
       </header>
       <div className="main__clock--container">
         <div className="main__clock__container__greeting--container">
-          <BsFillSunFill className="main__clock__container--greeting--sun"></BsFillSunFill>
+          <FaMoon className="main__clock__container--greeting--sun"></FaMoon>
           <p className="main__clock__container--greeting">
-            GOOD MORNING, IT'S CURRENTLY
+            GOOD EVENING, IT'S CURRENTLY
           </p>
         </div>
         <div className="main__clock__container__time--container">
@@ -28,13 +29,12 @@ const Morning = (props) => {
         </div>
         <div className="more__container">
           <p className="more__container--location">
-            {" "}
             in {props.city}, {props.country}
           </p>
-          <div className="more__container--dropdown">
-            <p className="more__container--text">MORE</p>
+          <div className="more__container__dark--dropdown">
+            <p className="more__container__dark--text">MORE</p>
             <button
-              className="more__container__dropdown--button"
+              className="more__container__dark__dropdown--button"
               onClick={() => props.onPress()}
             >
               <IoIosArrowDropdownCircle />
@@ -45,4 +45,4 @@ const Morning = (props) => {
     </div>
   );
 };
-export default Morning;
+export default Evening;
