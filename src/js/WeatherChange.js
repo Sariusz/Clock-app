@@ -24,10 +24,12 @@ const EveningCheck = () => {
   const [currentDays, setCurrentDays] = useState();
 
   const refresh = () => {
-    fetch("https://programming-quotes-api.herokuapp.com/Quotes/random")
+    fetch("https://api.api-ninjas.com/v1/quotes/", {
+      headers: { "X-Api-Key": "uyQId2ILxIJQCFf8c52XjA==dqt3pxJ8C5tcVz84" }
+    })
       .then((response) => response.json())
       .then((json) => {
-        setRandomQuote(json);
+        setRandomQuote(json[0]);
       });
   };
 
@@ -65,7 +67,7 @@ const EveningCheck = () => {
         <EveningLess
           onPress={press}
           onRefresh={refresh}
-          randomQuote={randomQuote.en}
+          randomQuote={randomQuote.quote}
           author={randomQuote.author}
           city={currentTime.data.city}
           country={currentTime.data.timezone.country_code}
@@ -80,7 +82,7 @@ const EveningCheck = () => {
         <Evening
           onPress={press}
           onRefresh={refresh}
-          randomQuote={randomQuote.en}
+          randomQuote={randomQuote.quote}
           author={randomQuote.author}
           city={currentTime.data.city}
           country={currentTime.data.timezone.country_code}
@@ -91,12 +93,11 @@ const EveningCheck = () => {
     }
   } else {
     if (typeof currentTime === "object" && typeof currentDays === "object") {
-      console.log(currentTime);
       checkEvening = pressed ? (
         <MorningLess
           onPress={press}
           onRefresh={refresh}
-          randomQuote={randomQuote.en}
+          randomQuote={randomQuote.quote}
           author={randomQuote.author}
           city={currentTime.data.city}
           country={currentTime.data.timezone.country_code}
@@ -111,7 +112,7 @@ const EveningCheck = () => {
         <Morning
           onPress={press}
           onRefresh={refresh}
-          randomQuote={randomQuote.en}
+          randomQuote={randomQuote.quote}
           author={randomQuote.author}
           city={currentTime.data.city}
           country={currentTime.data.timezone.country_code}
