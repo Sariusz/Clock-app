@@ -48,7 +48,6 @@ const EveningCheck = () => {
       .then((response) => response.json())
       .then((json) => {
         setCurrentDays(json);
-        console.log(json);
       });
   }, []);
   useEffect(() => {
