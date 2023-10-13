@@ -3,7 +3,12 @@ import "./scss/index.scss";
 import EveningCheck from "./js/WeatherChange";
 
 const App = () => {
-  return <EveningCheck />;
+  return (
+    <>
+      <EveningCheck />
+      
+    </>
+  );
 };
 
 export default App;

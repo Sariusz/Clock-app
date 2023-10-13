@@ -3,7 +3,7 @@ import { FiRefreshCw } from "react-icons/fi";
 import { FaMoon } from "react-icons/fa";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import "../scss/evening.scss";
-
+import Weather from "./Weather.js";
 const Evening = (props) => {
   return (
     <div className="main__container__dark">
@@ -15,6 +15,7 @@ const Evening = (props) => {
           </button>
         </div>
         <p className="header__author">{props.author}</p>
+        <Weather />
       </header>
       <div className="main__clock--container">
         <div className="main__clock__container__greeting--container">

@@ -2,7 +2,7 @@ import React from "react";
 import "../scss/EveningLess.scss";
 import { FaMoon } from "react-icons/fa";
 import { IoIosArrowDropupCircle } from "react-icons/io";
-
+import Weather from "./Weather";
 const EveningLess = (props) => {
   return (
     <div className="main__container--dark">
@@ -22,6 +22,7 @@ const EveningLess = (props) => {
               {props.timeZone}
             </p>
           </div>
+          <Weather />
           <div className="top__half__clock__less--container">
             <p className="top__half__clock__less__container--location">
               in {props.city}, {props.country}

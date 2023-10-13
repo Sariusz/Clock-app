@@ -2,6 +2,7 @@ import React from "react";
 import { BsFillSunFill } from "react-icons/bs";
 import { IoIosArrowDropupCircle } from "react-icons/io";
 import "../scss/morningLess.scss";
+import Weather from "./Weather";
 
 const MorningLess = (props) => {
   return (
@@ -22,6 +23,7 @@ const MorningLess = (props) => {
               {props.timeZone}
             </p>
           </div>
+          <Weather />
           <div className="top__half__clock__less__day--container">
             <p className="top__half__clock__less__container__day--location">
               in {props.city}, {props.country}
