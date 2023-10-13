@@ -15,10 +15,7 @@ html,
 body {
   font-size: 10px;
   font-family: var(--my-font-family);
-
-  body {
-    overflow-x: hidden;
-  }
+  overflow-x: hidden;
 }
 
 .main__container__dark {
@@ -30,7 +27,6 @@ body {
   background: url("../images/bg-image-nighttime.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-
 }
 
 .header {
@@ -47,7 +43,6 @@ body {
   display: flex;
   max-width: 50%;
   align-items: center;
-  padding-top: 6rem;
 }
 
 .header__button {
@@ -110,7 +105,6 @@ body {
 .main__clock__container--timeZone {
   font-size: 3rem;
   font-weight: bolder;
-  padding-top: 14rem;
   margin-top: -2rem;
   margin-left: 1rem;
 }
@@ -135,7 +129,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 10rem;
 }
 
 .more__container__dark--text {
@@ -153,4 +146,115 @@ body {
   padding-top: 1rem;
   cursor: pointer;
   color: black;
+}
+
+/* Media queries for tablet */
+@media (max-width: 768px) {
+  .header__quote {
+    max-width: 80%;
+    margin: 0 auto;
+
+  }
+
+  .header__button {
+    font-size: 1.6rem;
+    /* Adjusted font size for tablets */
+    margin-top: 0.5rem;
+    /* Adjusted margin for the button */
+    padding-left: 0.5rem;
+    vertical-align: top;
+  }
+
+  .main__container__dark header p {
+    margin-left: 1.5rem;
+    font-size: 1.4rem;
+    /* Adjusted font size for tablets */
+  }
+
+  .main__clock--container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1.5rem;
+  }
+
+  .main__clock--container div {
+    margin-left: 0.5rem;
+  }
+
+  .main__clock__container--currentTime {
+    font-size: 8rem;
+    margin-top: 1rem;
+  }
+
+  .main__clock__container--timeZone {
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-left: 0.5rem;
+  }
+
+  .header__author {
+    max-width: 80%;
+    margin: 0.5rem auto 0;
+    /* Adjusted margin for the author */
+  }
+}
+
+/* Media queries for mobile */
+@media (max-width: 480px) {
+  .header__quote {
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__button {
+    font-size: 1.4rem;
+    /* Adjusted font size for mobile */
+    /* Adjusted margin for the button */
+    padding-left: 0.5rem;
+    vertical-align: top;
+  }
+
+  .main__container__dark header p {
+    display: flex;
+    font-size: 1.5rem;
+    /* Adjusted font size for mobile */
+  }
+
+  .main__clock--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 1rem;
+    text-align: center;
+  }
+
+  .main__clock--container div {
+    margin-left: 0;
+    margin-top: 0.3rem;
+  }
+
+  .main__clock__container--currentTime {
+    font-size: 6rem;
+    margin-top: 0.3rem;
+  }
+
+  .main__clock__container--timeZone {
+    font-size: 3rem;
+    margin-top: 0.3rem;
+    margin-left: 0.5rem;
+    padding-top: 2rem;
+  }
+
+  .main__clock__container--greeting {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
 }

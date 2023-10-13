@@ -24,6 +24,17 @@ const Weather = () => {
           setWeatherData(data);
           setCity("");
           console.log(data);
+
+          // Check if the device is a phone (based on screen width)
+          const isPhone = window.innerWidth <= 480;
+
+          // Update padding-top of the element based on the device type
+          const greetingElement = document.querySelector(
+            ".main__clock__container--greeting"
+          );
+          if (greetingElement) {
+            greetingElement.style.paddingTop = isPhone ? "3rem" : ""; // Set the padding-top accordingly
+          }
         })
         .catch((error) => console.error("Error fetching data:", error));
     }
@@ -45,8 +56,8 @@ const Weather = () => {
           <p>
             Temperature: {Math.round(kelvinToCelsius(weatherData.main.temp))}°C
           </p>
-          <p>
-            description: {weatherData.weather[0].description}
+          <p className="weather_description">
+            Cloud cover: {weatherData.weather[0].description}
             {weatherData.weather[0].icon && (
               <img
                 src={mapIconToImageUrl(weatherData.weather[0].icon)}
@@ -54,7 +65,7 @@ const Weather = () => {
               />
             )}
           </p>
-          <p>wind: {weatherData.wind.speed} km/h</p>
+          <p>Wind: {weatherData.wind.speed} km/h</p>
         </div>
       )}
     </div>

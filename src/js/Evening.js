@@ -9,12 +9,19 @@ const Evening = (props) => {
     <div className="main__container__dark">
       <header className="header">
         <div className="header__quote">
-          <p>{props.randomQuote}</p>
-          <button className="header__button" onClick={() => props.onRefresh()}>
-            <FiRefreshCw color="white" />
-          </button>
+          <p>
+            {props.randomQuote}
+            <button
+              className="header__button"
+              onClick={() => props.onRefresh()}
+            >
+              <FiRefreshCw color="white" />
+            </button>
+          </p>
+
+          <p className="header__author">{props.author}</p>
         </div>
-        <p className="header__author">{props.author}</p>
+
         <Weather />
       </header>
       <div className="main__clock--container">

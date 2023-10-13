@@ -4,19 +4,47 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 25px;
+    padding: 2.5rem 1rem 0 1rem;
+
+    p {
+        margin: 0;
+        align-items: center;
+    }
+
+    .weather_description {
+        display: flex;
+        align-items: center;
+        height: 28px;
+    }
 }
-.main__container__weather p {
-    margin: 0;
-}
+
 .weather--input {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     padding: 15px;
-    width: 25%;
+    width: 10%;
     border: 1px solid lightgray;
     border-radius: 6px;
     font-size: 16px;
+    text-align: center;
+
+    &:focus {
+        outline: none;
+    }
 }
 
-.weather--input:focus {
-    outline: none;
+@media (max-width: 600px) {
+    .weather--input {
+        width: 80%;
+    }
+    .main__container__weather{
+        padding-top:6rem;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 992px) {
+    .weather--input {
+        width: 50%;
+    }
+
 }
