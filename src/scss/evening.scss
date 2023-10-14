@@ -211,7 +211,7 @@ body {
   }
 
   .header__button {
-    font-size: 1.4rem;
+    font-size: 2rem;
     /* Adjusted font size for mobile */
     /* Adjusted margin for the button */
     padding-left: 0.5rem;
@@ -228,13 +228,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
     margin-left: 1rem;
-    text-align: center;
   }
 
   .main__clock--container div {
-    margin-left: 0;
+    margin-left:2rem;
     margin-top: 0.3rem;
   }
 
@@ -249,12 +247,23 @@ body {
     margin-left: 0.5rem;
     padding-top: 2rem;
   }
-
+  .main__clock__container__greeting--container svg{
+    font-size:30px;
+  }
   .main__clock__container--greeting {
     display: flex;
     justify-content: center;
     margin: 0;
-    padding: 0;
     align-items: center;
+  }
+  .more__container--location{
+    letter-spacing: 0.2rem;
+  }
+  .more__container__dark--dropdown{
+    margin-right: 2rem;
+  }
+  .more__container__dark--text{
+    letter-spacing: 0;
+    margin-left:0.5rem;
   }
 }
