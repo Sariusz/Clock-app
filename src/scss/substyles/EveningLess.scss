@@ -297,8 +297,10 @@ h1 {
   }
 
   .more__clock--container div {
-    margin-left: 3rem;
-    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
   }
 
   .more__clock--container p {
@@ -308,9 +310,6 @@ h1 {
   .more__clock--container h1,
   .more__clock__container--weekinfo h1 {
     font-size: 2.5rem;
-  }
-  .more__clock__container--dayinfo{
-    margin-left:5rem;
   }
   .more__clock__container--dayinfo p,
   .more__clock__container--weekinfo p {
