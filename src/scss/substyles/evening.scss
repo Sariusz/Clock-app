@@ -1,4 +1,3 @@
-
 .main__container__dark {
   display: flex;
   flex-direction: column;
@@ -10,7 +9,7 @@
   background-repeat: no-repeat;
 }
 
-.header {
+.dark_header {
   font-size: 1.8rem;
   font-weight: regular;
   line-height: 2.8rem;
@@ -20,10 +19,15 @@
   flex-direction: column;
 }
 
-.header__quote {
-  display: flex;
+.dark_header__quote {
   max-width: 50%;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    font-size: 2.5rem;
+    padding-top: 2.5rem;
+  }
 }
 
 .header__button {
@@ -220,28 +224,33 @@
     margin-left: 0.5rem;
     padding-top: 2rem;
   }
-  .main__clock__container__greeting--container svg{
-    font-size:5rem;
+
+  .main__clock__container__greeting--container svg {
+    font-size: 5rem;
   }
+
   .main__clock__container--greeting {
     display: flex;
     justify-content: center;
-    margin-right:3rem;
-    margin-top:1.5rem;
-    padding:0;
+    margin-right: 3rem;
+    margin-top: 1.5rem;
+    padding: 0;
     align-items: center;
     text-align: center;
     letter-spacing: 0.3rem;
   }
-  .more__container--location{
+
+  .more__container--location {
     letter-spacing: 0.2rem;
-    font-size:2rem;
+    font-size: 2rem;
   }
-  .more__container__dark--dropdown{
+
+  .more__container__dark--dropdown {
     margin-right: 2rem;
   }
-  .more__container__dark--text{
+
+  .more__container__dark--text {
     letter-spacing: 0;
-    margin-left:0.5rem;
+    margin-left: 0.5rem;
   }
 }

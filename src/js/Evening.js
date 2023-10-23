@@ -7,8 +7,8 @@ import Weather from "./Weather.js";
 const Evening = (props) => {
   return (
     <div className="main__container__dark">
-      <header className="header">
-        <div className="header__quote">
+      <header className="dark_header">
+        <div className="dark_header__quote">
           <p>
             {props.randomQuote}
             <button
