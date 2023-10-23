@@ -1,5 +1,5 @@
 import React from "react";
-import "../scss/EveningLess.scss";
+import "../scss/index.scss";
 import { FaMoon } from "react-icons/fa";
 import { IoIosArrowDropupCircle } from "react-icons/io";
 import Weather from "./Weather";

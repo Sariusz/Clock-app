@@ -108,7 +108,7 @@ const EveningCheck = () => {
           dayOfWeek={currentDays.day_of_week}
           weekOfYear={currentDays.week_number}
         />
-      ) : (
+      ) : ( 
         <Evening {...commonProps} />
       );
     }

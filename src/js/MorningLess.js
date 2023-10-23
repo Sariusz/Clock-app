@@ -1,7 +1,7 @@
 import React from "react";
 import { BsFillSunFill } from "react-icons/bs";
 import { IoIosArrowDropupCircle } from "react-icons/io";
-import "../scss/morningLess.scss";
+import "../scss/index.scss";
 import Weather from "./Weather";
 
 const MorningLess = (props) => {

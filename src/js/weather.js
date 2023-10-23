@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../scss/weather.scss";
+import "../scss/index.scss";
 
 const mapIconToImageUrl = (iconCode) => {
   return `https://openweathermap.org/img/w/${iconCode}.png`;
