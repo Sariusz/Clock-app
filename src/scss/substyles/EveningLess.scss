@@ -309,7 +309,9 @@ h1 {
   .more__clock__container--weekinfo h1 {
     font-size: 2.5rem;
   }
-
+  .more__clock__container--dayinfo{
+    margin-left:5rem;
+  }
   .more__clock__container--dayinfo p,
   .more__clock__container--weekinfo p {
     padding-bottom: 0.5rem;
