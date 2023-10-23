@@ -14,7 +14,7 @@
     .weather_description {
         display: flex;
         align-items: center;
-        height: 28px;
+        height: 2.2rem;
     }
 }
 
@@ -36,9 +36,16 @@
 @media (max-width: 600px) {
     .weather--input {
         width: 80%;
+        margin:1rem 1rem;
     }
     .main__container__weather{
-        padding-top:6rem;
+        padding-top:7rem;
+    }
+        .main__container__weather p{
+            font-size: 1.3rem;
+        }
+    .top__half--container .main__container__weather{
+        padding-top: 3rem;
     }
 }
 
@@ -47,4 +54,4 @@
         width: 50%;
     }
 
-}
+}   

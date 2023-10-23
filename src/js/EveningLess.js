@@ -9,8 +9,8 @@ const EveningLess = (props) => {
       <div className="top__half--container">
         <div className="top__half__clock--container">
           <div className="top__half__clock__container__greeting--container">
-            <FaMoon className="top__half__clock__container__greeting--sun"></FaMoon>
             <p className="top__half__clock__container__greeting--text">
+              <FaMoon className="main__clock__container--greeting--sun"></FaMoon>
               GOOD EVENING, IT'S CURRENTLY
             </p>
           </div>

@@ -8,7 +8,7 @@ import EveningLess from "./EveningLess.js";
 const checkTime = () => {
   const now = new Date();
   const toggleComponent = new Date();
-  toggleComponent.setHours(13, 0, 0, 0);
+  toggleComponent.setHours(11, 0, 0, 0);
   return now >= toggleComponent;
 };
 
@@ -109,8 +109,7 @@ const EveningCheck = () => {
           weekOfYear={currentDays.week_number}
         />
       ) : (
-          <Evening {...commonProps} />
-          
+        <Evening {...commonProps} />
       );
     }
   } else {

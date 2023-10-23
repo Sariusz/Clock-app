@@ -158,9 +158,7 @@ body {
 
   .header__button {
     font-size: 1.6rem;
-    /* Adjusted font size for tablets */
     margin-top: 0.5rem;
-    /* Adjusted margin for the button */
     padding-left: 0.5rem;
     vertical-align: top;
   }
@@ -168,7 +166,6 @@ body {
   .main__container__dark header p {
     margin-left: 1.5rem;
     font-size: 1.4rem;
-    /* Adjusted font size for tablets */
   }
 
   .main__clock--container {
@@ -196,7 +193,6 @@ body {
   .header__author {
     max-width: 80%;
     margin: 0.5rem auto 0;
-    /* Adjusted margin for the author */
   }
 }
 
@@ -212,16 +208,13 @@ body {
 
   .header__button {
     font-size: 2rem;
-    /* Adjusted font size for mobile */
-    /* Adjusted margin for the button */
     padding-left: 0.5rem;
     vertical-align: top;
   }
 
   .main__container__dark header p {
     display: flex;
-    font-size: 1.5rem;
-    /* Adjusted font size for mobile */
+    font-size: 1.8rem;
   }
 
   .main__clock--container {
@@ -232,7 +225,6 @@ body {
   }
 
   .main__clock--container div {
-    margin-left:2rem;
     margin-top: 0.3rem;
   }
 
@@ -248,16 +240,21 @@ body {
     padding-top: 2rem;
   }
   .main__clock__container__greeting--container svg{
-    font-size:30px;
+    font-size:5rem;
   }
   .main__clock__container--greeting {
     display: flex;
     justify-content: center;
-    margin: 0;
+    margin-right:3rem;
+    margin-top:1.5rem;
+    padding:0;
     align-items: center;
+    text-align: center;
+    letter-spacing: 0.3rem;
   }
   .more__container--location{
     letter-spacing: 0.2rem;
+    font-size:2rem;
   }
   .more__container__dark--dropdown{
     margin-right: 2rem;

@@ -26,8 +26,8 @@ const Evening = (props) => {
       </header>
       <div className="main__clock--container">
         <div className="main__clock__container__greeting--container">
-          <FaMoon className="main__clock__container--greeting--sun"></FaMoon>
           <p className="main__clock__container--greeting">
+            <FaMoon className="main__clock__container--greeting--sun"></FaMoon>
             GOOD EVENING, IT'S CURRENTLY
           </p>
         </div>
