@@ -183,7 +183,7 @@
 
 /* Media queries for mobile */
 @media (max-width: 480px) {
-  .header__quote {
+  .dark_header__quote {
     max-width: 90%;
     margin: 0 auto;
     margin-top: 2rem;
@@ -197,7 +197,7 @@
     vertical-align: top;
   }
 
-  .main__container__dark header p {
+  .dark_header p {
     display: flex;
     font-size: 1.8rem;
   }
