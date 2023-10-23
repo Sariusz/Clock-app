@@ -1,4 +1,6 @@
-@import 'evening.scss';
-@import 'EveningLess.scss';
-@import 'morningLess.scss';
-@import 'weather.scss';
+@import './substyles/reset.scss';
+@import './substyles/morning.scss';
+@import './substyles/morningLess.scss';
+@import './substyles/evening.scss';
+@import './substyles/EveningLess.scss';
+@import './substyles/weather.scss';
