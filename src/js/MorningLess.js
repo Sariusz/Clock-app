@@ -2,7 +2,7 @@ import React from "react";
 import { BsFillSunFill } from "react-icons/bs";
 import { IoIosArrowDropupCircle } from "react-icons/io";
 import "../scss/index.scss";
-import Weather from "./Weather";
+import Weather from "./weather";
 
 const MorningLess = (props) => {
   return (

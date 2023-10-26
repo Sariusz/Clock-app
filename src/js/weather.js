@@ -21,19 +21,22 @@ const Weather = () => {
       )
         .then((response) => response.json())
         .then((data) => {
-          setWeatherData(data);
-          setCity("");
-          console.log(data);
+          if (data.cod === 200) {
+            setWeatherData(data);
+            setCity("");
+            // Check if the device is a phone (based on screen width)
+            const isPhone = window.innerWidth <= 480;
 
-          // Check if the device is a phone (based on screen width)
-          const isPhone = window.innerWidth <= 480;
-
-          // Update padding-top of the element based on the device type
-          const greetingElement = document.querySelector(
-            ".main__clock__container--greeting"
-          );
-          if (greetingElement) {
-            greetingElement.style.paddingTop = isPhone ? "3rem" : ""; // Set the padding-top accordingly
+            // Update padding-top of the element based on the device type
+            const greetingElement = document.querySelector(
+              ".main__clock__container--greeting"
+            );
+            if (greetingElement) {
+              greetingElement.style.paddingTop = isPhone ? "3rem" : ""; // Set the padding-top accordingly
+            }
+            else {
+              console.log("Please insert a name of an existing city")
+            }
           }
         })
         .catch((error) => console.error("Error fetching data:", error));
@@ -51,7 +54,7 @@ const Weather = () => {
         onKeyPress={getWeather}
       />
       {weatherData.main && (
-        <div>
+        <div className="main__container__weather--description">
           <p>City: {weatherData.name}</p>
           <p>
             Temperature: {Math.round(kelvinToCelsius(weatherData.main.temp))}°C

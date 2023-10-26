@@ -8,7 +8,7 @@ import EveningLess from "./EveningLess.js";
 const checkTime = () => {
   const now = new Date();
   const toggleComponent = new Date();
-  toggleComponent.setHours(22, 0, 0, 0);
+  toggleComponent.setHours(20, 0, 0, 0);
   return now >= toggleComponent;
 };
 

@@ -186,7 +186,6 @@
   .dark_header__quote {
     max-width: 90%;
     margin: 0 auto;
-    margin-top: 2rem;
     display: flex;
     flex-direction: column;
   }
@@ -247,6 +246,7 @@
 
   .more__container__dark--dropdown {
     margin-right: 2rem;
+    width: 35%;
   }
 
   .more__container__dark--text {

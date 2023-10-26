@@ -3,7 +3,7 @@ import { FiRefreshCw } from "react-icons/fi";
 import { FaMoon } from "react-icons/fa";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import "../scss/index.scss";
-import Weather from "./Weather.js";
+import Weather from "./weather.js";
 const Evening = (props) => {
   return (
     <div className="main__container__dark">

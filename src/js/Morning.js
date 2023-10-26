@@ -3,7 +3,7 @@ import { FiRefreshCw } from "react-icons/fi";
 import { BsFillSunFill } from "react-icons/bs";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import "../scss/index.scss";
-import Weather from "./Weather";
+import Weather from "./weather";
 const Morning = (props) => {
   return (
     <div className="main__container">

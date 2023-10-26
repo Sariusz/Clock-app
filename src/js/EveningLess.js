@@ -2,7 +2,7 @@ import React from "react";
 import "../scss/index.scss";
 import { FaMoon } from "react-icons/fa";
 import { IoIosArrowDropupCircle } from "react-icons/io";
-import Weather from "./Weather";
+import Weather from "./weather";
 const EveningLess = (props) => {
   return (
     <div className="main__container--dark">
